@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	font-family: 'Montserrat', sans-serif;
+}
+
+body{
+	background: #585c68;
+	font-size: 14px;
+	line-height: 22px;
+	color: #555555;
+}
+
+.bold{
+	font-weight: 700;
+	font-size: 20px;
+	text-transform: uppercase;
+}
+
+.semi_bold{
+	font-weight: 600;
+	font-size: 16px;
+}
+
+.resume{
+	width: 800px;
+	height: auto;
+	display: flex;
+	margin: 50px auto;
+}
+
+/* Set width of page for resume_left and it's background color */
+.resume .resume_left{
+	width: 280px;
+	background: #0bb5f4
+}
+
+.resume .resume_left .resume_pic{
+	width: 100%;
+	height: 280px;
+}
+
+.resume .resume_left .resume_pic img{
+	width: 100%;
+	height: 100%;
+}
+
+/* Aligned the text 15px to right and 15 px to left */
+.resume .resume_left .resume_content{
+	padding: 0 15px;
+}
+
+.resume .title{
+
+	padding-bottom: 20px;
+}
+
+/*While colorin headings (Brijyot singh chawla, Skills, Social) */
+.resume .resume_left .bold{
+	color: #fff;
+}
+
+/* */
+.resume .resume_left .regular{
+	color: #fff;
+}
+
+/* Gives bottom border and top & bottom aligns the heading (Brijyot Singh Chawla)  */
+.resume .resume_address{
+	padding: 25px 0;
+	border-bottom: 2px solid #fff;
+}
+
+/* Gives bottom border and top & bottom aligns the heading (Skills, Social)  */
+.resume .resume_item{
+	padding: 25px 0;
+	border-bottom: 2px solid #fff;
+}
+
+/* removes the unneeded bottom margin*/
+.resume .resume_left .resume_item:last-child{
+	border-bottom: 0px;
+}
+
+/* Decides how to display elements inside list i.e. inline or flex or block, etc ? */
+.resume .resume_left ul li{
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+
+/* Decides how to display elements inside list i.e. inline or flex or block, etc ? */
+.resume .resume_left ul li:last-child{
+	margin-bottom: 0;
+}
+
+/* White color to all list texts */
+.resume .resume_left ul li .data{
+	color: #fff;
+}
+
+/* Creates a circle  */
+.resume .resume_left ul li .icon{
+	width: 30px;
+	height: 30px;
+	background: #fff;
+	color: #0bb5f4;
+	border-radius: 50%;
+	margin-right: 15px;
+	font-size: 16px;
+	position: relative;
+	
+}
+
+/* Fits the images inside the circle, in the middle */
+.resume .icon i{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/*White color to skills and gives space between skills and percentage values  */
+.resume .resume_left .resume_skills ul li{
+	color: #fff;
+	justify-content: space-between;
+}
+
+/*Make width of skill name as 25%  */
+.resume .resume_left .resume_skills ul li .skill_name{
+	width: 25%;
+}
+
+/*Defines height, width color for progress bar  */
+.resume .resume_left .resume_skills ul li .skill_progress{
+	width: 60%;
+	margin: 0 5px; /* Margin is used to create space for that element outside of the defined border or increases elements border*/
+	height: 5px;
+	background: #009fd9;
+	position: relative;
+}
+
+/*Defines height, width color for progress bar  */
+.resume .resume_left .resume_skills ul li .skill_per{
+	width: 15%;
+}
+
+/*Fills the progress bar with white color  */
+.resume .resume_left .resume_skills ul li .skill_progress span{
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: #fff;
+	position: absolute;
+}
+
+/* Setup resume_right background color and width */
+.resume .resume_right{
+	width: 520px;
+	background: #fff;
+	padding: 25px;
+}
+
+/* Setup color for bold titles */
+.resume .resume_right .bold{
+	color: #0bb5f4;
+}
+
+/* Defines border lines for resume_right headings*/
+.resume .resume_right .resume_item{
+	padding: 25px 0;
+	border-bottom: 2px solid #0bb5f4;
+}
+
+/* Align list text on resume_righ*/
+.resume .resume_right .resume_work ul,
+.resume .resume_right .resume_education ul{
+	padding-left: 0px;
+	overflow: hidden;
+}
+
+.resume .resume_right ul li{
+	position: relative;
+}
+
+.resume .resume_right ul li .date{
+	font-size: 16px;
+	font-weight: 600;
+	margin-bottom: 15px;
+}
+
+.resume .resume_right ul li .info{
+	margin-bottom: 0px;
+}
+
+.resume .resume_right ul li:last-child .info{
+	margin-bottom: 0;
+}
+
+/*.resume .resume_right .resume_work ul li:before,*/
+.resume .resume_right .resume_education ul li:before{
+	content:"";
+	position: absolute;
+	top: 5px;
+	left: -25px;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	border: 2px solid #0bb5f4;
+}
+
+/*.resume .resume_right .resume_work ul li:after,*/
+.resume .resume_right .resume_education ul li:after{
+	content:"";
+	position: absolute;
+	top: 14px;
+	left: -21px;
+	width: 2px;
+	height: 110px;
+	background: #0bb5f4;
+}
+
+.resume .resume_right ul li{
+	padding-bottom: 15px;
+}
+
+.resume .resume_right .resume_work .responsibilty ul li::before{
+	content: "\2022"; 
+	color: black; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+ 
+  width: 200em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+.resume .resume_right .resume_work .responsibilty ul li{
+	display: inline;
+	padding-left:10px;
+	list-style-type: none;
+	margin-left: 10px;
+	list-style-position: inside;
+	font-weight:none;
+}
+
+.resume .resume_right .resume_work .responsibilty ul li:after{
+	content: " \00b7";
+}
+
+.resume .resume_right .resume_work .responsibilty ul li:last-child:after{
+	content: none;
+}
+
+.resume .resume_right .resume_name{
+	display: block;
+	background-color: #0bb5f4;
+	padding: 20px;
+	border: 1px solid #0bb5f4;
+	
+}
+
+.resume .resume_right .resume_name .name{
+	font-size:30px;
+	margin-bottom: 10px;
+	font-family: Arial;
+	color: #ffffff;
+	font-weight: bold;
+	text-align: center;
+}
+
+.resume .resume_right .resume_name .job_role{
+	font-size:17px;
+	font-family: Arial;
+	text-align: center;
+	color: #ffffff;
+	font-weight: normal;
+	
+}
+
+
+.align_left{
+	float: left;
+	font-weight: bold;
+	font-family: Arial;
+	font-size: 15px;
+}
+
+.align_right{
+	float: right;
+	font-weight: bold;
+	font-family: Arial;
+	font-size: 15px;
+}
+
+.responsibilty > p{
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
